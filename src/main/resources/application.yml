@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  tomcat:
+    max-http-form-post-size: 81920
+spring:
+  application:
+    name: reggie_take_out
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 123Znice
+  mail:
+    default-encoding: UTF-8
+    host: smtp.163.com
+    username: bs_zhang2022@163.com
+    password: CVEBVBFIQQGZCIKI
+    properties:
+      mail:
+        smtp:
+          auth: true
+          stattle:
+            required: true
+          starttls:
+            enable: true
+
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+
+reggie:
+  path: /Users/zhangboshuo/Desktop
+  email:
+    system: bs_zhang2022@163.com
